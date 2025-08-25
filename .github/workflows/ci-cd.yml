@@ -18,10 +18,11 @@ jobs:
         node-version: "18"
 
     - name: Instalar dependencias
-  run: npm install --include=dev
+    run: npm ci --include=dev
 
-  - name: Dar permisos a jest
-  run: chmod +x ./node_modules/.bin/jest
+
+    - name: Dar permisos a jest
+   run: chmod +x ./node_modules/.bin/jest
 
     - name: Ejecutar pruebas unitarias
       run: npm test
